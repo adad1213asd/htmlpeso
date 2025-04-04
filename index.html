@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Peso</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulario de Peso</h2>
+        <label for="gender">Género:</label>
+        <select id="gender">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" min="0" placeholder="Ingresa tu peso en kg">
+
+        <button onclick="checkWeight()">Enviar</button>
+    </div>
+
+    <div class="image-container" id="image-container"><div class="panic1">
+        <img id="panic-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj94Jo5bVyQePOa4aMi_wOZTOT0sDdktix9g&s" alt="Imagen de pánico">
+    </div></div>
+
+    <script>
+        function checkWeight() {
+            const weight = document.getElementById("weight").value;
+            const imageContainer = document.getElementById("image-container");
+            const panicImage = document.getElementById("panic-image");
+
+            if (weight > 60) {
+                imageContainer.style.display = "block";
+                panicImage.classList.add("rotate", "panic");
+            } else {
+                imageContainer.style.display = "none";
+            }
+        }
+    </script>
+</audio>
+</body>
+</html>
