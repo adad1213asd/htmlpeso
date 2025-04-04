@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.image-container {
+  display: none;
+  margin-top: 20px;
+  position: relative;
+}
+
+img {
+  width: 950px;
+  transition: transform 2s ease-in-out;
+  position: absolute; top: -350px; left: 450px;
+}
+
+/* Animación de pánico */
+.panic {
+  animation: panicAnimation 111111s infinite;
+}
+
+@keyframes panicAnimation {
+  0% {
+      transform: rotate(deg);
+  }
+  100% {
+      transform: rotate(111111360deg);
+  }
+
+}
+@keyframes growAnimation {
+  0% {
+      transform: scale(0.1); /* Comienza muy pequeña */
+  }
+  100% {
+      transform: scale(1); /* Tamaño original */
+  }
+}
+.panic1 {
+  animation: growAnimation 3s forwards;
+}
+/* Animación de rotación a la derecha */
+.rotate {
+  transform: rotate(360deg);
+}
+body {
+  background-color:white
+}
